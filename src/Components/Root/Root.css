@@ -2,4 +2,13 @@ nav a.active {
     color: white;
     border-bottom: 3px solid green;
 }
-
+.pageno:hover{
+    border-radius: 9999px;
+    color: white;
+    background-color: gray;
+}
+div b.active{
+    border-radius: 9999px;
+    color: white;
+    background-color: gray;
+}
