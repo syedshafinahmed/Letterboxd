@@ -10,31 +10,37 @@ import Films from './Components/Films/Films.jsx';
 import Watchlist from './Components/Watchlist/Watchlist.jsx';
 import Activity from './Components/Activity/Activity.jsx';
 import Likes from './Components/Likes/Likes.jsx';
+import Popular from './Components/Popular/Popular.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    children:[
+    children: [
       {
-        path:"profile",
+        path: "profile",
         Component: Profile
       },
       {
-        path:"films",
+        path: "films",
         Component: Films
       },
       {
-        path:"watchlist",
+        path: "watchlist",
         Component: Watchlist
       },
       {
-        path:"activity",
+        path: "activity",
         Component: Activity
       },
       {
-        path:"likes",
+        path: "likes",
         Component: Likes
+      },
+      {
+        path: "popular",
+        loader: () => fetch('https://api.themoviedb.org/3/movie/popular?api_key=901f9327dcc8ea161e321c7ff5b7dfa7'),
+        Component: Popular
       },
     ]
   },

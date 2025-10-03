@@ -7,6 +7,7 @@ const Bar = () => {
             <nav className='flex gap-x-3 py-3 justify-center'>
                 <NavLink to="profile">Profile</NavLink>
                 <NavLink to="activity">Activity</NavLink>
+                <NavLink to="Popular">Popular</NavLink>
                 <NavLink to="films">Films</NavLink>
                 <NavLink to="watchlist">Watchlist</NavLink>
                 <NavLink to="likes">Likes</NavLink>
