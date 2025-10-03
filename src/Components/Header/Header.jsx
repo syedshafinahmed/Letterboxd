@@ -4,7 +4,7 @@ import Me from '../../assets/orangme.jpg'
 const Header = () => {
     return (
         <div className='bg-[#13171b]'>
-            <div className='montserrat max-w-7xl mx-auto flex justify-between'>
+            <div className='montserrat max-w-6xl mx-auto flex justify-between'>
                 <div className='flex items-center gap-x-2'>
                     <img src={Letterboxd} alt="letterboxd-logo" />
                     <p className='text-4xl font-bold text-white'>Letterboxd</p>

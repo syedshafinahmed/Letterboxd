@@ -2,7 +2,7 @@ import React from 'react';
 import Me from '../../assets/orangme.jpg'
 const Banner = () => {
     return (
-        <div className='max-w-7xl mx-auto py-9 flex justify-between'>
+        <div className='max-w-6xl mx-auto py-9 flex justify-between'>
             <div className='flex gap-x-3'>
                 <img className='w-15 rounded-full border-1' src={Me} alt="" />
                 <div>
