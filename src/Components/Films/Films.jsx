@@ -5,15 +5,23 @@ const Films = () => {
     const films = useLoaderData();
     console.log(films);
     return (
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl mx-auto mt-15'>
             <div className='relative'>
                 <img className='w-full' src={`https://image.tmdb.org/t/p/original${films.backdrop_path}`} alt="" />
-                <div className='absolute top-11'>
-                    <img className='h-100' src={`https://image.tmdb.org/t/p/original${films.poster_path}`} alt="" />
-                    <p>{films.oroginal_title}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent  to-transparent"></div>
+
+                <div className='absolute top-150 left-20 mb-30 flex gap-x-8'>
+                    <img className='h-100 rounded-lg shadow-lg border-1 border-white' src={`https://image.tmdb.org/t/p/original${films.poster_path}`} alt="" />
+                    <div className='text-white'>
+                        <p className='font-bold  text-3xl mb-7'>{films.original_title}</p>
+                        <p className='italic font-semibold'>{films.release_date}</p>
+                        <p className='w-50 text-justify'>{films.overview}</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+
     );
 };
 
