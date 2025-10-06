@@ -1,9 +1,18 @@
 import React from 'react';
+import { useLoaderData } from 'react-router';
 
 const Films = () => {
+    const films = useLoaderData();
+    console.log(films);
     return (
         <div className='max-w-6xl mx-auto'>
-            <p>Films</p>
+            <div className='relative'>
+                <img className='w-full' src={`https://image.tmdb.org/t/p/w500${films.backdrop_path}`} alt="" />
+                <div className='absolute top-11'>
+                    <img src={`https://image.tmdb.org/t/p/w500${films.poster_path}`} alt="" />
+                    <p>{films.oroginal_title}</p>
+                </div>
+            </div>
         </div>
     );
 };

@@ -22,7 +22,10 @@ const router = createBrowserRouter([
         Component: Profile
       },
       {
-        path: "films",
+        path: "/films/:id",
+        loader: async({ params }) => {
+          return fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=901f9327dcc8ea161e321c7ff5b7dfa7`);
+        },
         Component: Films
       },
       {
@@ -51,7 +54,7 @@ const router = createBrowserRouter([
       {
         path: "popular",
         loader: () => redirect("/popular/1"),
-      }      
+      }
     ]
   },
 ]);

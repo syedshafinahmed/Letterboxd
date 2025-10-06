@@ -1,9 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 const PopularList = ({ popula }) => {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate(`/films/${popula.id}`);
+    }
     return (
         <div className='max-w-6xl mx-auto'>
-            <div className='relative group'>
+            <div onClick={handleClick} className='relative group cursor-pointer'>
                 {/* <p>{popula.original_title}</p> */}
                 {/* <img src={`https://image.tmdb.org/t/p/w500${popula.backdrop_path}`} alt="" /> */}
                 <img className='w-full h-40 object-cover' src={`https://image.tmdb.org/t/p/w500${popula.poster_path}`} alt="" />
