@@ -7,9 +7,9 @@ const Films = () => {
     return (
         <div className='max-w-6xl mx-auto'>
             <div className='relative'>
-                <img className='w-full' src={`https://image.tmdb.org/t/p/w500${films.backdrop_path}`} alt="" />
+                <img className='w-full' src={`https://image.tmdb.org/t/p/original${films.backdrop_path}`} alt="" />
                 <div className='absolute top-11'>
-                    <img src={`https://image.tmdb.org/t/p/w500${films.poster_path}`} alt="" />
+                    <img className='h-100' src={`https://image.tmdb.org/t/p/original${films.poster_path}`} alt="" />
                     <p>{films.oroginal_title}</p>
                 </div>
             </div>
