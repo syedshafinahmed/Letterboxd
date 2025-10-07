@@ -17,6 +17,12 @@ const Films = () => {
                         <p className='italic font-semibold'>{films.release_date}</p>
                         <p className='w-50 text-justify'>{films.overview}</p>
                     </div>
+                    <div className='bg-gray-600 h-50 text-white p-5'>
+                        <span className='flex gap-x-2 items-center'> <p>Watch</p><i class="fa-solid fa-eye"></i></span>
+                        <span className='flex gap-x-2 items-center'> <p>Like</p><i class="fa-solid fa-heart"></i></span>
+                        <span className='flex gap-x-2 items-center'> <p>Watchlist</p><i class="fa-solid fa-list"></i></span>
+                        <span className='flex gap-x-2 items-center'> <p>Rate</p><i class="fa-solid fa-star"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
